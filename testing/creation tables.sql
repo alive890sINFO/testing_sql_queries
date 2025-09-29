@@ -37,3 +37,15 @@
 --constraint fk_partite_ospite foreign key (squadraOspite)references squadre(idSquadra)
 --)
 --insert into squadre(squadra)values('Bra'),('Fossano'),('Savigliano'),('Saluzzo'),('Alba');
+
+--select name sq1 e name sq2 si di una partita disputata in un giorno
+--select Sq1.squadra as 'casa',Sq2.squadra as 'ospite',convert(char(10),dataPartita,105) as 'data' from Partite P
+--left join squadre Sq1 on P.squadraCasa=Sq1.idSquadra
+--left join squadre Sq2 on P.squadraOspite=Sq2.idSquadra
+--where dataPartita='2025-09-29'
+--
+----creo una tabella con tutte le possibili partite di andata
+--select Sq1.idSquadra as 'host',Sq2.idSquadra as 'guest'into partite_prova from Partite P
+--left join squadre Sq1 on P.squadraCasa=Sq1.idSquadra
+--left join squadre Sq2 on P.squadraOspite=Sq2.idSquadra
+
