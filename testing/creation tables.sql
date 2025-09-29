@@ -1,0 +1,39 @@
+﻿--create table reparti(
+--id int identity(1,1) primary key,
+--reparto varchar(50) not null,
+--)
+--
+--create table dipendenti(
+--idDipendente int identity(1,1) primary key,
+--cognome varchar(50) not null,
+--nome varchar(50) not null,
+--email varchar(50),
+--dataAssunzione date default(getdate()),
+--stipendio float ,
+--idTutor int null foreign key references dipendenti(idDipendente),
+--idReparto int not null foreign key references reparti(id),
+--constraint check_stipendio check(stipendio>0)
+--)
+--insert into reparti(reparto)values('Pubblicità'),('Vendite'),('Informatica'),('Contatti'),('Logistica');
+--insert into dipendenti(cognome,nome,email,stipendio,idReparto)values
+--('rossi','mario','mario@rossi.com',2500,2),
+--('bianchi','mauro','mauro@bianchi.com',1500,1),
+--('gialli','simone','simone@gialli.com',1500,1),
+--('Verdi','Giuliano','giuliano@verdi.com',2000,4),
+--('Bruno','Mars','mars@bruno.com',1800,4);
+--tutor e dipendente corrispondente
+--select d1.idDipendente as 'id dipendente',d1.nome as 'nome dipendente',d2.idDipendente as 'id tutor', d2.nome as 'nome_tutor' from dipendenti d1,dipendenti d2 where d1.idDipendente=d2.idTutor
+--create table squadre(
+--idSquadra int not null primary key identity(1,1),
+--squadra varchar(30),
+--goalFatti int default 0,
+--goalSubiti int default 0)
+--
+--create table Partite(
+--idPartita int not null primary key identity(1,1),
+--squadraCasa int not null,squadraOspite int not null,
+--goalCasa int default(0),goalOspite int default(0),
+--constraint fk_partite_casa foreign key (squadraCasa )references squadre(idSquadra),
+--constraint fk_partite_ospite foreign key (squadraOspite)references squadre(idSquadra)
+--)
+--insert into squadre(squadra)values('Bra'),('Fossano'),('Savigliano'),('Saluzzo'),('Alba');
